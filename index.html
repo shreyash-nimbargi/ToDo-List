@@ -1,24 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List App</title>
-    <link rel="stylesheet"  href="style.css">
+    <title>Premium ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 <div class="container">
     <div class="todoapp">
-        <h2>ToDo List<img src="images\icon.png"></h2>
+        <h2>ToDo List <i class="fas fa-tasks"></i></h2>
         <div class="row">
-            <input type="text" id="input-box" placeholder="Add your text">
-            <button onclick="addTask()">Add</button>
+            <input type="text" id="input-box" placeholder="Add your task...">
+            <button onclick="addTask()" class="add-btn">
+                <i class="fas fa-plus"></i>
+            </button>
         </div>
-        <ul id="list-container">
-            <!--<li class="checked">Task 1</li>
-            <li>Task 2</li>
-            <li>Task 3</li>-->
-        </ul>
+        <ul id="list-container"></ul>
+        <div class="footer">
+            <span id="task-counter">0 tasks remaining</span>
+            <button onclick="clearCompleted()" class="clear-btn">Clear Completed</button>
+        </div>
     </div>
 </div>
 <script src="script.js"></script>
